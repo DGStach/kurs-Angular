@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { Test3Component } from './test/test3.component';
+import { WyswietlanieDanychComponent } from './wyswietlanie-danych/wyswietlanie-danych.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    Test3Component,
+    WyswietlanieDanychComponent
   ],
   imports: [
     BrowserModule,
