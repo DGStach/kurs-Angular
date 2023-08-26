@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class WyswietlanieDanychComponent {
 
   dog = new Dog('Reksio', 13, new Date);
-  pi:number=3.14232352323
+  pi?:number
   
   showDog() {
     return `Moj pies nazywa sie` + this.dog.name
