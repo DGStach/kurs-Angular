@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <p>
-    Moj pies nazywa się {{dog.name}},
-    Moj pies ma {{dog.age}}lat 
+    Moj pies nazywa się {{dog.name|uppercase}}<br>
+    Moj pies ma {{dog.age}}lat <br>
+    Urodzil sie {{dog.date|date:'shortDate'}} <br>
+    Liczba Pi wynosi {{pi | number:'1.0-2'}}
 </p>
 
 {{showDog()}}
