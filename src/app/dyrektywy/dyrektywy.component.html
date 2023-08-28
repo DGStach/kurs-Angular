@@ -7,7 +7,13 @@
 </ul>
 
 <div *ngFor="let dog of dogs, let i = index">
-    {{i}} Moj piesek wabi sie {{dog.name}} i ma {{dog.age}}
+    <div *ngIf = "dog.age === 3">
+        {{i}} Moj piesek wabi sie {{dog.name}} i ma {{dog.age}}
+    </div>
 </div>
 
-<div *ngFor = "let i of [1,2,3]">moj pies fafik w iteraci {{i}}</div>
+<ng-container *ngFor = "let i of [1,2,3]">
+    <div *ngIf="i < 3">
+        moj pies fafik w iteraci {{i}}
+    </div>
+</ng-container>

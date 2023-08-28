@@ -10,7 +10,7 @@ export class DyrektywyComponent {
   
   dogs = new Array<Dog>();
   constructor() {
-  this.dogs.push(new Dog('Reksio',4), new Dog("Latek",5) )
+  this.dogs.push(new Dog('Reksio',3), new Dog("Latek",5) )
 }
 }
 
