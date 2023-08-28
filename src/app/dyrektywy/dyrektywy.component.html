@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<ul>
+
+<div *ngIf="days.length>0; then areDays; else noDays"></div>
+
+<ng-template #areDays>
+    <ul>
     dni tygodnia: 
-    <li *ngFor = "let day of days">
+    <ng-container *ngFor = "let day of days, let e = even">
+    <li *ngIf="e">
     dzień {{day}}
     </li>
+    </ng-container>
 </ul>
+</ng-template>
+
+<ng-template #noDays>
+Lack of Days!
+</ng-template>
+
+
+<button (click)="removeDays()">usun</button>
+<button (click)="addDays()">dodaj</button><br>
+
+
 
 <div *ngFor="let dog of dogs, let i = index">
     <div *ngIf = "dog.age === 3">

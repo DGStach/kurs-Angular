@@ -10,10 +10,17 @@ export class DyrektywyComponent {
   
   dogs = new Array<Dog>();
   constructor() {
-  this.dogs.push(new Dog('Reksio',3), new Dog("Latek",5) )
-}
-}
+    this.dogs.push(new Dog('Reksio', 3), new Dog("Latek", 5))
+  }
+  
+  removeDays = () => {
+    this.days.length = 0;
+  }
 
+  addDays = () => {
+    this.days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+  }
+}
 class Dog{
   constructor(public name:string, public age:number) {
 }
