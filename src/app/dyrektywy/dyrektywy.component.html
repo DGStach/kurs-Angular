@@ -3,34 +3,45 @@
 <div *ngIf="days.length>0; then areDays; else noDays"></div>
 
 <ng-template #areDays>
-    <ul>
-    dni tygodnia: 
-    <ng-container *ngFor = "let day of days, let e = even">
-    <li *ngIf="e">
-    dzień {{day}}
-    </li>
+  <ul>
+    dni tygodnia:
+    <ng-container *ngFor="let day of days, let e = even">
+      <li *ngIf="e">
+        dzień {{day}}
+      </li>
     </ng-container>
-</ul>
+  </ul>
 </ng-template>
 
-<ng-template #noDays>
-Lack of Days!
+<ng-template #noDays>>
+  Lack of Days!
 </ng-template>
-
 
 <button (click)="removeDays()">usun</button>
 <button (click)="addDays()">dodaj</button><br>
 
-
-
 <div *ngFor="let dog of dogs, let i = index">
-    <div *ngIf = "dog.age === 3">
-        {{i}} Moj piesek wabi sie {{dog.name}} i ma {{dog.age}}
-    </div>
+  <div *ngIf="dog.age === 3">
+    {{i}} Moj piesek wabi sie {{dog.name}} i ma {{dog.age}}
+  </div>
 </div>
 
-<ng-container *ngFor = "let i of [1,2,3]">
-    <div *ngIf="i < 3">
-        moj pies fafik w iteraci {{i}}
-    </div>
+<ng-container *ngFor="let i of [1,2,3]">
+  <div *ngIf="i < 3">
+    moj pies fafik w iteraci {{i}}
+  </div>
 </ng-container>
+
+<div *ngFor="let day of days">
+  <span [ngSwitch]="day">
+    <p *ngSwitchCase="'monday'">poniedziałek
+    </p>
+    <p *ngSwitchCase="'tuesday'">wtorek
+    </p>
+    <p *ngSwitchCase="'wednesday'">sroda
+    </p>
+    <p *ngSwitchDefault>
+        innny dzień tygodnia
+    </p>
+  </span>
+</div>
