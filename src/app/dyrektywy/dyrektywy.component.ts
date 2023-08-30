@@ -23,7 +23,6 @@ export class DyrektywyComponent {
     this.isHide = !this.isHide
   }
 
-
   removeDays = () => {
     this.days.length = 0;
   }
