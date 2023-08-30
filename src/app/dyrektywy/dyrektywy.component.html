@@ -45,3 +45,13 @@
     </p>
   </span>
 </div>
+
+<div *ngIf="isVisible">
+    POKAZUJEMY DANE zA POMOCA NG IF
+</div>
+<button (click)="show()">ngIf</button>
+
+<div [hidden]="isHide">
+    HIDE DANE ZA POMOCA [hide]
+</div>
+<button (click)="hide()">hide</button>

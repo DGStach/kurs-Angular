@@ -13,6 +13,17 @@ export class DyrektywyComponent {
     this.dogs.push(new Dog('Reksio', 3), new Dog("Latek", 5))
   }
   
+  isVisible = true;
+  isHide = false;
+
+  show(){ 
+    this.isVisible = !this.isVisible
+  }
+  hide = () => { 
+    this.isHide = !this.isHide
+  }
+
+
   removeDays = () => {
     this.days.length = 0;
   }
