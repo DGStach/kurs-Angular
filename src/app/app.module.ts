@@ -7,7 +7,9 @@ import { Test3Component } from './test/test3.component';
 import { WyswietlanieDanychComponent } from './wyswietlanie-danych/wyswietlanie-danych.component';
 import { DyrektywyComponent } from './dyrektywy/dyrektywy.component';
 import { DataBindingComponent } from './data-binding/data-binding.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { TaskListComponent } from './task-list/task-list.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,8 @@ import { FormsModule } from '@angular/forms'
     Test3Component,
     WyswietlanieDanychComponent,
     DyrektywyComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
