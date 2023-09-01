@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Kurs';
+  activityList = ["ZADANIE1", "ZADANIE 2"]
 }

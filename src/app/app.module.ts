@@ -8,7 +8,8 @@ import { WyswietlanieDanychComponent } from './wyswietlanie-danych/wyswietlanie-
 import { DyrektywyComponent } from './dyrektywy/dyrektywy.component';
 import { DataBindingComponent } from './data-binding/data-binding.component'
 import { FormsModule } from '@angular/forms';
-import { TaskListComponent } from './task-list/task-list.component'
+import { TaskListComponent } from './task-list/task-list.component';
+import { PassToChildComponent } from './pass-to-child/pass-to-child.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TaskListComponent } from './task-list/task-list.component'
     WyswietlanieDanychComponent,
     DyrektywyComponent,
     DataBindingComponent,
-    TaskListComponent
+    TaskListComponent,
+    PassToChildComponent
   ],
   imports: [
     BrowserModule,
