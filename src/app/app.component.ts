@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Kurs';
-  activityList = ["ZADANIE1", "ZADANIE 2"]
+  activityList = ["ZADANIE1", "ZADANIE 2"];
+  select(task: string): void{
+    console.log("to jest przekazany task z childa do parenta przy pomocy przycisku SELECT", task)
+  }
+
 }

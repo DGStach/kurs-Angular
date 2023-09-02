@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-pass-to-child',
@@ -8,11 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PassToChildComponent implements OnInit {
 @Input()
 tasks = ["ZADANIE1", "ZADANIE 2"]
-
   
-  constructor() {}
-
+  @Output()
+  eventTask = new EventEmitter<string>();
+  
+  select(task: any) {
+/*     console.log(task);
+ */    this.eventTask.emit(task);
+}
+  
 ngOnInit() {
 }
-
 }
